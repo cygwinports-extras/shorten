@@ -1,0 +1,7 @@
+DESCRIPTION="Waveform audio compressor"
+HOMEPAGE="http://shnutils.freeshell.org/shorten/"
+SRC_URI="http://shnutils.freeshell.org/shorten/dist/src/${P}.tar.gz"
+PATCH_URI="mirror://portage/media-sound/${PN}/files/${PN}-tests.patch
+           3.6.1-vpath.patch"
+
+CYGCONF_ARGS="ac_cv_header_windows_h=no"
