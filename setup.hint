@@ -1,5 +1,0 @@
-category: Audio
-requires: libgcc1
-sdesc: "Waveform audio compressor"
-ldesc: "shorten is a fast, low complexity waveform coder (i.e. audio 
-compressor). It can operate in both lossy and lossless modes."

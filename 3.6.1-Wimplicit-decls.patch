@@ -1,0 +1,21 @@
+--- origsrc/shorten-3.6.1/include/binary.h	2002-02-11 14:51:45.000000000 -0600
++++ src/shorten-3.6.1/include/binary.h	2013-11-13 03:20:50.033478200 -0600
+@@ -11,7 +11,7 @@
+ #include <assert.h>
+ #include <math.h>
+ 
+-#if   defined _WIN32  ||  defined __TURBOC__  ||  defined __ZTC__  ||  defined _MSC_VER
++#if   defined _WIN32  ||  defined __TURBOC__  ||  defined __ZTC__  ||  defined _MSC_VER || defined __CYGWIN__
+ # include <io.h>
+ # include <fcntl.h>
+ # include <time.h>
+--- origsrc/shorten-3.6.1/src/fixio.c	2002-01-27 19:16:52.000000000 -0600
++++ src/shorten-3.6.1/src/fixio.c	2013-11-13 03:23:27.980512300 -0600
+@@ -13,6 +13,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <unistd.h> // for swab
+ #include "shorten.h"
+ #include "bitshift.h"
+ 
